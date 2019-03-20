@@ -15,7 +15,7 @@ Two datasets in the format pictured above are supplied, one for model training a
 ### Error Metric
 When evaluating your model’s performance in its ability to predict a household’s poverty status, you should use the logloss error metric. We define the logloss metric through the following formula:
 
-![equation](https://latex.codecogs.com/gif.latex?\fn_cm&space;\frac{1}{N}\sum^{N}_{i=1}[y_ilog(\hat{y}_i)&plus;(1-y_i)log(1-\hat{y}_i)])
+![equation](https://latex.codecogs.com/gif.latex?\fn_cm&space;-\frac{1}{N}\sum^{N}_{i=1}[y_ilog(\hat{y}_i)&plus;(1-y_i)log(1-\hat{y}_i)])
 
 The logloss metric any value from 0 to positive infinity in which a model scoring a 0 is a perfect classifier. Also, notice how the logloss error function operates. The metric rewards a model that confidently classifies a household correctly and punishes a model that is overconfident for wrong classifications. For example, a model that predicts a high probability of a household being poor and the household is actually poor will receive a lower logloss score than a model that predicts a high probability of poverty for a household that is not poor.
 
